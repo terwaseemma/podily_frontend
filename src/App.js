@@ -8,11 +8,14 @@ import OnboardingTwo from './Pages/second_onboard/OnboardingTwo';
 import Pathways from './Pages/pathways/Pathways';
 import Practice from './Pages/practice/Practice';
 import posthog from 'posthog-js'
+import { Analytics } from "@vercel/analytics/react"
 
 posthog.init('phc_9Jj1Y5ehniCBiv7txH2OJCPvS1qIH5u6W4fjiwof9GI', { api_host: 'https://app.posthog.com' })
 
 function App() {
   return (
+    <div> 
+    <Analytics />
     <Router>
       <Routes>
         <Route path="/" element={<Signup/>} />
@@ -24,6 +27,7 @@ function App() {
         <Route path="/practice" element={<Practice />} />
       </Routes>
     </Router>
+    </ div>
   );
 }
 
