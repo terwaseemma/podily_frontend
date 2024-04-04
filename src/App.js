@@ -7,6 +7,9 @@ import OnboardingOne from './Pages/first_onboard/OnboardingOne';
 import OnboardingTwo from './Pages/second_onboard/OnboardingTwo';
 import Pathways from './Pages/pathways/Pathways';
 import Practice from './Pages/practice/Practice';
+import posthog from 'posthog-js'
+
+posthog.init('phc_9Jj1Y5ehniCBiv7txH2OJCPvS1qIH5u6W4fjiwof9GI', { api_host: 'https://app.posthog.com' })
 
 function App() {
   return (
